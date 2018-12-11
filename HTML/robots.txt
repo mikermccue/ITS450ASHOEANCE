@@ -1,0 +1,3 @@
+User-agent:  * # Applies to all!
+Disallow: /includes/ # Don't scan the includes directory.
+Disallow: /admin/ # Don't scan the administrative directory, if it exists.
