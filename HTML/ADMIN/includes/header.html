@@ -1,0 +1,69 @@
+<?php session_start(); ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title><?php // Use a default page title if one wasn't provided...
+	if (isset($page_title)) { 
+			echo $page_title; 
+	} else { 
+			echo 'Shoe - Administration'; 
+	} 
+	?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/superfish.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/hoverIntent.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/superfish.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css" media="screen">
+	#content { background: #fff; width:100%; padding:20px 100px 30px 0px; }
+	#header .nav li ul a { color:#ffe7be; text-decoration:none; text-transform:none; font-size: .75em; }
+</style>
+<script type="text/javascript"> 
+
+	// Enable Superfish:
+	$(function() { 
+		$('ul.sf-menu').superfish({
+			autoArrows: false,
+			speed: 'fast'
+		});
+	}); 
+ 
+</script>
+<!--[if lt IE 7]>
+   <script type="text/javascript" src="/js/ie_png.js"></script>
+   <script type="text/javascript">
+       ie_png.fix('.png, .logo h1, .box .left-top-corner, .box .right-top-corner, .box .left-bot-corner, .box .right-bot-corner, .box .border-left, .box .border-right, .box .border-top, .box .border-bot, .box .inner, .special dd, #contacts-form input, #contacts-form textarea');
+   </script>
+<![endif]-->
+</head>
+
+<body id="page1">
+   <!-- header -->
+   <div id="header">
+      <div class="container">
+         <div class="wrapper">
+            <div class="logo"><h1><a href="./index.php">Shoe</a><span>Wouldn't you love a Shoe right now?</span></h1></div>
+         </div>
+
+	<form align="right" name="logout" method="post" action="../logout.php">
+		<input name="submit" type="submit" id="submit" value="Logout">
+	</form>	
+
+         <ul class="nav sf-menu">
+			<!-- MENU -->	
+			
+			<li style="border: 1px solid white"><a href="add_specific_coffees.php">Add Shoe Products</a></li>
+			<li style="border: 1px solid white"><a href="add_other_products.php">Add Non-Shoe Products</a></li>
+			<li style="border: 1px solid white"><a href="add_inventory.php">Add Inventory</a></li>
+			
+			<li style="border: 1px solid white"><a href="create_sales.php">Sales</a></li>
+			<li style="border: 1px solid white"><a href="view_orders.php">Orders</a></li>
+			<li style="border: 1px solid white"><a href="customers.php">Customers</a></li> 
+			<!-- END MENU -->
+         </ul>
+      </div>
+   </div>
+   <!-- content -->
+   <div id="content">
+     <div class="container">
+ 
